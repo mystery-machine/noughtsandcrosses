@@ -198,7 +198,7 @@ def nonCompMove(board, case, turn):
         return case
     else:
         
-        if case == 1:
+        if case == 1 or case == 2:
             for i in range(len(scores[1])):
                 if board[scores[1][i][0]][scores[1][i][1]] == " ":
                     move = scores[1][i]
@@ -220,19 +220,7 @@ def nonCompMove(board, case, turn):
                     move = scores[1][i]
                     board[move[0]][move[1]] = comp
                     return case
-        if case == 2:
-            for i in range(len(scores[1])):
-                if board[scores[1][i][0]][scores[1][i][1]] == " ":
-                    move = scores[1][i]
-                    board[move[0]][move[1]] = comp
-                    return case
-            for i in range(len(scores[0])):
-                if board[scores[0][i][0]][scores[0][i][1]] == " ":
-                    move = scores[0][i]
-                    board[move[0]][move[1]] = comp
-                    return case
-            
-            
+        
 case = 0       
             
 
